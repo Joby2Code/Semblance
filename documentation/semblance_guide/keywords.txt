@@ -1,0 +1,10 @@
+Application: SemblanceFacialRecognition
+Stack: SemblanceFacialRecognitionStack
+
+
+Face Collection: semblanceFaceCollection
+Kinesis Video Stream : SemblanceLiveRekognitionVideoAnalysis
+Kinesis Data Stream : SemblanceFacialRecognition-Stream
+
+
+Stream Processor: streamProcessorForSemblance

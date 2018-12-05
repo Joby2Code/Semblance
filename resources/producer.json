@@ -1,0 +1,20 @@
+{
+       "Name": "streamProcessorForSemblance",
+       "Input": {
+              "KinesisVideoStream": {
+                     "Arn": "arn:aws:kinesisvideo:us-west-2:661219094067:stream/SemblanceLiveRekognitionVideoAnalysis/1544041114432"
+              }
+       },
+       "Output": {
+              "KinesisDataStream": {
+                     "Arn": "arn:aws:kinesis:us-west-2:661219094067:stream/SemblanceFacialRecognition-Stream"
+              }
+       },
+       "RoleArn": "arn:aws:iam::661219094067:role/SemblanceFacialRecognitionStac-RekognitionVideoIAM-OGN7CT8GZOQF",
+       "Settings": {
+              "FaceSearch": {
+                     "CollectionId": "semblanceFaceCollection",
+                     "FaceMatchThreshold": 85.5
+              }
+       }
+}

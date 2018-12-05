@@ -1,0 +1,31 @@
+Harshit----
+Facial Recognition(Training Data)
+Required data from the frontend: 
+image name,
+S3bucket
+full name as Joby_Joy
+
+
+
+
+Joby---
+Create Lambda to write to SQS Queue.
+Creat API to send attendee's - Lambda that queries SQS and generates the email report to the host.
+
+
+
+Jinren:
+Admin console
+Upload Image API by image or folder- Attributes to be set at the frontend.
+Send Report page.
+
+
+
+
+
+Questions: 
+
+1) Do we embed the HLS client to the web app?
+   https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-hls.html
+
+2) Live Monitoring Application ?
