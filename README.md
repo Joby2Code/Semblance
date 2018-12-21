@@ -9,3 +9,6 @@ SQS
 API Gatway
 Lambda
 
+The Architecture diagram is : 
+
+![Screenshot](Semblance_user.jpg)
