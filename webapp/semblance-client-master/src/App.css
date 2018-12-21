@@ -1,0 +1,44 @@
+#global-alert {
+  position: fixed;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  z-index: 2;
+}
+
+.navbar {
+  background-color: #694caf;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.navbar-brand.nav-link {
+  /* color: rgba(0, 0, 0, 0.9); */
+  color: #fff;
+}
+
+.landing {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  max-width: 1000px;
+  margin: 60px auto 0;
+}
+
+.landing-image {
+  flex: 1 0 50%;
+}
+
+.landing-body {
+  flex: 1 0 50%;
+}
+
+.spy-image {
+  width: 100%;
+}
