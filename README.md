@@ -9,11 +9,16 @@ SQS
 API Gatway
 Lambda
 
-The Architecture diagram is : 
 
-Monitoring Mode
+Architecture - Monitoring Mode
+
+
+
 ![Screenshot](Semblance_user.jpg)
 
 
-Training Mode
+Architecture -  Training Mode
+
+
+
 ![Screenshot](Semblance_admin.jpg)
