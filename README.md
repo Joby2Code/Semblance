@@ -11,4 +11,9 @@ Lambda
 
 The Architecture diagram is : 
 
+Monitoring Mode
 ![Screenshot](Semblance_user.jpg)
+
+
+Training Mode
+![Screenshot](Semblance_admin.jpg)
