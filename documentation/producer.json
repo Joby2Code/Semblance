@@ -1,0 +1,20 @@
+{
+       "Name": "streamProcessorForBlog",
+       "Input": {
+              "KinesisVideoStream": {
+                     "Arn": "arn:aws:kinesisvideo:us-west-2:661219094067:stream/LiveRekognitionVideoAnalysisBlog/1543686234209"
+              }
+       },
+       "Output": {
+              "KinesisDataStream": {
+                     "Arn": "arn:aws:kinesis:us-west-2:661219094067:stream/RekognitionVideoBlog-Stream"
+              }
+       },
+       "RoleArn": "arn:aws:iam::661219094067:role/RekognitionVideoBlog-RekognitionVideoIAM-BSGDQTENWX8X",
+       "Settings": {
+              "FaceSearch": {
+                     "CollectionId": "rekVideoBlog",
+                     "FaceMatchThreshold": 85.5
+              }
+       }
+}

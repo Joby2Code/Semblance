@@ -12,6 +12,31 @@ function isInArray(value, array) {
   return array.indexOf(value) > -1;
 }
 
+
+function add_to_queue(matchedFaceName) {
+    console.log("adding to queue",matchedFaceName);
+    var params = {
+          MessageAttributes: {
+              "Face":{
+                DataType: "String",
+                StringValue: matchedFaceName
+              }
+          },
+          MessageBody: "Faces recognized from AWS Rekognition.",
+          QueueUrl: sqs_queue
+      };
+
+    sqs.sendMessage(params, function(err, data) {
+          if (err) {
+                console.log("Error writing to sqs", err);
+          } else {
+            console.log("Success", data.MessageId);
+            console.log(data);
+          }
+    });
+
+}
+
 exports.handler = (event, context, callback) => {
         
         console.log('reading from kinesis.....');
@@ -38,7 +63,7 @@ exports.handler = (event, context, callback) => {
                                 matchedFaceList.push(matchedFaceName);
                                 matchFaceMap[matchedFaceName] = face.MatchedFaces[i].Face.BoundingBox;
                                 console.log('Name......'+matchedFaceName);
-                                console.log('Bondingbox..'+boundingBox);
+                                //console.log('Bondingbox..'+boundingBox);
                             }
                             
                        }
@@ -55,28 +80,11 @@ exports.handler = (event, context, callback) => {
             console.log(matchedFaceList);
             console.log(matchFaceMap);
             for (var name in matchedFaceList) {
-                matchedFaceName = name;
-                
+                matchedFaceName = matchedFaceList[name];
+                //matchedFaceName = name;
+                add_to_queue(matchedFaceName)
             }
-            var params = {
-              MessageAttributes: {
-                "Face":{
-                  DataType: "String",
-                  StringValue: matchedFaceName
-                }
-              },
-              MessageBody: "Faces recognized from AWS Rekognition.",
-              QueueUrl: sqs_queue
-            };
-
-            sqs.sendMessage(params, function(err, data) {
-              if (err) {
-                console.log("Error", err);
-              } else {
-                console.log("Success", data.MessageId);
-                console.log(data);
-              }
-            });
+            
         }
 
 

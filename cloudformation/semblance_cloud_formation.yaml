@@ -107,7 +107,7 @@ Resources:
       Role: !GetAtt SNSPublishRole.Arn
       Code: 
         S3Bucket: "us-west-2.serverless-analytics"
-        S3Key: "KinesisVideoRekognitionVideo-blog/Lambda.zip"
+        S3Key: "KinesisVideoRekognitionVideo-Semblance/Lambda.zip"
       Runtime: "nodejs6.10"
       Timeout: "120"
 
